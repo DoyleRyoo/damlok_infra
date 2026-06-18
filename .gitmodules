@@ -1,0 +1,9 @@
+[submodule "damlok_frontend"]
+	path = damlok_frontend
+	url = https://github.com/DoyleRyoo/damlok_frontend
+[submodule "damlok_backend"]
+	path = damlok_backend
+	url = https://github.com/DoyleRyoo/damlok_backend
+[submodule "damlok_AI"]
+	path = damlok_AI
+	url = https://github.com/DoyleRyoo/damlok_AI

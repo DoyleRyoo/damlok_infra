@@ -1,0 +1,31 @@
+{
+  "name": "damrok",
+
+  "dockerComposeFile": "../docker-compose.yml",
+
+  // frontend
+  "service": "damlok_frontend",
+  // backend
+  // "service": "damlok_backend",
+  // AI
+  // "service": "damlok_AI",
+
+  "workspaceFolder": "/app",
+
+  "shutdownAction": "stopCompose",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+
+        "vscjava.vscode-java-pack",
+
+        "ms-python.python",
+
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}

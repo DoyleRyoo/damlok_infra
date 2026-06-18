@@ -1,0 +1,54 @@
+services:
+
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.dev
+
+    ports:
+      - "5173:5173"
+
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+
+    env_file:
+      - .env
+
+    depends_on:
+      - backend
+      - ai
+
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.dev
+
+    ports:
+      - "8080:8080"
+
+    volumes:
+      - ./server:/app
+      - ~/.m2:/root/.m2
+
+    env_file:
+      - .env
+
+    depends_on:
+      - ai
+
+
+  ai:
+    build:
+      context: ./AI
+      dockerfile: Dockerfile.dev
+
+    ports:
+      - "9000:9000"
+
+    volumes:
+      - ./AI:/app
+
+    env_file:
+      - .env
