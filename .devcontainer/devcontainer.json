@@ -1,7 +1,7 @@
 {
   "name": "damrok",
 
-  "dockerComposeFile": "../docker-compose.yml",
+  "dockerComposeFile": "../.devcontainer/docker-compose.yml",
 
   // frontend
   "service": "damlok_frontend",
@@ -10,7 +10,7 @@
   // AI
   // "service": "damlok_AI",
 
-  "workspaceFolder": "/app",
+  "workspaceFolder": "/damlok",
 
   "shutdownAction": "stopCompose",
 
