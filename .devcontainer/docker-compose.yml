@@ -1,51 +1,40 @@
 services:
   damlok_frontend:
     build:
-      context: ./damlok_frontend
-      dockerfile: Dockerfile.dev
-
+      context: ../../damlok_frontend
+      dockerfile: Dockerfile
     ports:
       - "5173:5173"
-
     volumes:
-      - ./damlok_frontend:/app
+      - ../../damlok_frontend:/app
       - /app/node_modules
-
     env_file:
-      - ./.env
-
+      - ../.env
     depends_on:
       - damlok_backend
-      - damlok_AI
+      - damlok_ai
 
   damlok_backend:
     build:
-      context: ./damlok_backend
-      dockerfile: Dockerfile.dev
-
+      context: ../../damlok_backend
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
-
     volumes:
-      - ./damlok_frontend:/app
+      - ../../damlok_backend:/app
       - ~/.m2:/root/.m2
-
     env_file:
-      - ./.env
-
+      - ../.env
     depends_on:
-      - damlok_AI
+      - damlok_ai
 
-  damlok_AI:
+  damlok_ai:
     build:
-      context: ./damlok_frontend
-      dockerfile: Dockerfile.dev
-
+      context: ../../damlok_AI
+      dockerfile: Dockerfile
     ports:
       - "9000:9000"
-
     volumes:
-      - ./damlok_frontend:/app
-
+      - ../../damlok_AI:/app
     env_file:
-      - ./.env
+      - ../.env
