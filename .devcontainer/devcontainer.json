@@ -4,13 +4,13 @@
   "dockerComposeFile": "../.devcontainer/docker-compose.yml",
 
   // frontend
-  "service": "damlok_frontend",
+  // "service": "damlok_frontend",
   // backend
-  // "service": "damlok_backend",
+  //"service": "damlok_backend",
   // AI
-  // "service": "damlok_AI",
+   "service": "damlok_ai",
 
-  "workspaceFolder": "/damlok",
+  "workspaceFolder": "/app",
 
   "shutdownAction": "stopCompose",
 
