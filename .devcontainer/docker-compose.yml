@@ -38,3 +38,10 @@ services:
       - ../../damlok_AI:/app
     env_file:
       - ../.env
+
+networks:
+  default:
+    enable_ipv6: true
+    ipam:
+      config:
+        - subnet: fd00:dead:beef::/64

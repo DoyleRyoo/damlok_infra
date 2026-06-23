@@ -6,9 +6,9 @@
   // frontend
   // "service": "damlok_frontend",
   // backend
-  //"service": "damlok_backend",
+   "service": "damlok_backend",
   // AI
-   "service": "damlok_ai",
+  // "service": "damlok_ai",
 
   "workspaceFolder": "/app",
 
